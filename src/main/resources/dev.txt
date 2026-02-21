@@ -1,0 +1,6 @@
+Software Development Best Practices:
+1. SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
+2. Design Patterns: Singleton, Factory, Observer, and Strategy are commonly used to solve recurring software design problems.
+3. RESTful API Design: Uses HTTP methods (GET, POST, PUT, DELETE) and follows a stateless communication protocol.
+4. Unit Testing: Testing individual components or functions in isolation to ensure they work correctly.
+5. CI/CD: Continuous Integration and Continuous Deployment help automate the software delivery process.

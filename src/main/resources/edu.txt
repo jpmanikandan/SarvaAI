@@ -1,0 +1,31 @@
+Sarva Gurukul EdTech Guidance
+
+1. Learning Methodology: Focus on first-principles thinking. Break complex problems into smaller, manageable parts before attempting to solve them.
+2. Physics - Newton's Laws: 
+   - First Law: An object stays at rest or in motion unless acted upon by an external force.
+   - Second Law: Force equals mass times acceleration (F=ma).
+   - Third Law: For every action, there is an equal and opposite reaction.
+3. Mathematics - Study Tips: Practice regularly. Understand the 'why' behind formulas rather than just memorizing them.
+4. Computer Science: Start with logic and algorithms. Language is just a tool; the core is problem-solving.
+5. Soft Skills: Effective communication and time management are as important as technical knowledge.
+6. Multi-language Learning: Use Sarva Bhasha to translate concepts into your native language to grasp difficult topics faster.
+
+---
+English Learning Module (Supernova AI Style)
+
+7. Grammar Rules:
+   - Subject-Verb Agreement: A singular subject takes a singular verb, while a plural subject takes a plural verb. Example: "She eats" vs "They eat".
+   - Tenses: Use Present Simple for habits ("I study"), Present Continuous for actions happening now ("I am studying").
+   - Articles: Use 'a' before consonants, 'an' before vowels, and 'the' for specific things.
+
+8. Conversation Practice Scripts:
+   - Restaurant: "I would like to order a steak." "Could I have the bill, please?"
+   - Job Interview: "Tell me about yourself." "What are your strengths?"
+   - Small Talk: "Nice weather today, isn't it?" "What do you do for a living?"
+
+9. Common Idioms & Phrasal Verbs:
+   - "Break the ice": Starting a conversation.
+   - "Call it a day": Deciding to stop working for the day.
+   - "Look up to": To respect someone.
+
+10. Native Language Bridging: If you don't understand a term like "Preposition", ask: "Explain Prepositions in my native language."
