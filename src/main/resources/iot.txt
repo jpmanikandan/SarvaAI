@@ -1,0 +1,8 @@
+Sarva IoT & Yantra Technical Guidance
+
+1. Smart Home Automation: Connect devices like lights, fans, and security systems to a central hub for remote control and energy savings.
+2. Predictive Maintenance: Use sensors to monitor machine health (vibration, heat, sound). AI predicts failures before they happen, saving downtime.
+3. Industrial IoT (IIoT): Streamline manufacturing processes through real-time monitoring of assembly lines and supply chain logistics.
+4. Sarva Yantra Hardware: Our smart devices are built for high durability and low power consumption. They interface seamlessly with the Sarva IoT platform.
+5. Security in IoT: Always use encrypted communication (SSL/TLS) between devices and the cloud. Change default passwords immediately upon setup.
+6. Edge Computing: Process critical data on the device (the edge) for faster response times, and ship only necessary data to the cloud.

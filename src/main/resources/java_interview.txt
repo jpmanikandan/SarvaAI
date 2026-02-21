@@ -1,0 +1,52 @@
+JAVA DEVELOPER INTERVIEW PREPARATION
+
+CORE JAVA
+1. OOP Concepts
+   - Encapsulation: Wrapping data and methods (e.g., private fields with getters/setters).
+   - Inheritance: Mechanism where one class acquires properties of another (extends keyword).
+   - Polymorphism: Ability to take many forms (Overloading vs Overriding).
+   - Abstraction: Hiding implementation details (Abstract classes vs Interfaces).
+
+2. Collections Framework
+   - List: ArrayList (dynamic array, fast access), LinkedList (doubly linked list, fast insert/delete).
+   - Set: HashSet (unique, unordered), TreeSet (sorted, unique).
+   - Map: HashMap (key-value, average O(1)), TreeMap (sorted keys, O(log n)), ConcurrentHashMap (thread-safe).
+
+3. Multithreading
+   - Thread vs Runnable.
+   - Synchronization: synchronized keyword, Locks, ReentrantLock.
+   - Executor Service: FixedThreadPool, CachedThreadPool, ScheduledThreadPool.
+   - Volatile keyword: Visibility guarantee.
+
+4. Java 8+ Features
+   - Lambda Expressions: Concise way to represent functional interfaces.
+   - Streams API: Functional-style operations on streams of elements (filter, map, reduce, collect).
+   - Optional: Container object to handle nulls gracefully.
+   - Default methods in interfaces.
+
+SPRING BOOT
+1. Annotations
+   - @SpringBootApplication: @Configuration + @EnableAutoConfiguration + @ComponentScan.
+   - @RestController vs @Controller: @RestController includes @ResponseBody.
+   - @Autowired: Dependency Injection.
+   - @Service, @Repository, @Component.
+
+2. Dependency Injection
+   - Constructor Injection (Preferred).
+   - Setter Injection.
+   - Field Injection (Not recommended).
+
+3. Profiles
+   - application-dev.properties, application-prod.properties.
+   - Active profiles handled via spring.profiles.active.
+
+4. Spring Data JPA
+   - JpaRepository interface.
+   - Derived queries (findByLastName).
+
+MICROSERVICES
+1. Characteristics: Small, independent, loosely coupled services.
+2. Communication: REST (Synchronous), Kafka/RabbitMQ (Asynchronous).
+3. Service Discovery: Eureka, Consul.
+4. API Gateway: Spring Cloud Gateway.
+5. Circuit Breaker: Resilience4j.

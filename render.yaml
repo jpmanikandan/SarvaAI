@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: sarva-ai-backend
+    runtime: docker
+    plan: free
+    region: singapore # Choose closest region
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: OPENAI_API_KEY
+        sync: false # Must be set in Render dashboard
+      - key: PINECONE_API_KEY
+        sync: false # Must be set in Render dashboard
+      - key: GOOGLE_CLIENT_ID
+        sync: false # Must be set in Render dashboard
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false # Must be set in Render dashboard
+      - key: DATABASE_PATH
+        value: ./data/sarva_db
+    
+    # Persistent Disk (Requires Paid Tier)
+    # disk:
+    #   name: sarva-data
+    #   mountPath: /app/data
+    #   sizeGB: 1

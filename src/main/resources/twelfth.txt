@@ -1,0 +1,73 @@
+12TH STANDARD (HSC) MATHEMATICS, PHYSICS, CHEMISTRY
+
+MATHEMATICS
+1. Calculus - Differentiation
+   - d/dx(x^n) = n*x^(n-1)
+   - d/dx(sin x) = cos x, d/dx(cos x) = -sin x
+   - Chain Rule: d/dx[f(g(x))] = f'(g(x)) * g'(x)
+   - Product Rule: d/dx(uv) = u'v + uv'
+   - Quotient Rule: d/dx(u/v) = (u'v - uv') / v^2
+
+2. Calculus - Integration
+   - Integral(x^n dx) = (x^(n+1))/(n+1) + C
+   - Integral of 1/x = log|x| + C
+   - Integration by Parts: Integral(u dv) = uv - Integral(v du)
+
+3. Vectors
+   - Dot Product: a . b = |a||b|cos(theta) -> Scalar
+   - Cross Product: a x b = |a||b|sin(theta)n -> Vector perpendicular to both
+   - Scalar Triple Product: [a b c] = a . (b x c)
+
+4. Matrices
+   - Determinant, Inverse (A^-1 = adj(A) / |A|)
+   - Cramer's Rule for solving linear equations.
+
+PHYSICS
+1. Electrostatics
+   - Coulomb's Law: F = k * (q1 * q2) / r^2
+   - Electric Field: E = F / q
+   - Gauss Law: Flux = q_enclosed / epsilon_0
+
+2. Current Electricity
+   - Ohm's Law: V = IR
+   - Kirchhoff's Laws (KCL, KVL)
+   - Wheatstone Bridge condition: P/Q = R/S
+
+3. Magnetism
+   - Biot-Savart Law
+   - Ampere's Circuital Law
+
+4. Optics
+   - Laws of Reflection and Refraction (Snell's Law: n1 sin i = n2 sin r)
+   - Lens Maker's Formula
+   - Interference (Young's Double Slit Experiment)
+
+CHEMISTRY
+1. Physical Chemistry
+   - Solid State: Unit cells (SC, BCC, FCC), Packing Efficiency.
+   - Electrochemistry: Nernst Equation, Faraday's Laws.
+   - Chemical Kinetics: Order of reaction, Half-life period.
+
+2. Organic Chemistry
+   - Haloalkanes and Haloarenes (SN1, SN2 mechanisms)
+   - Alcohols, Phenols, Ethers
+   - Aldehydes, Ketones, Carboxylic Acids (Aldol condensation, Cannizzaro reaction)
+
+3. Inorganic Chemistry
+   - p-Block Elements
+   - d and f Block Elements
+   - Coordination Compounds (IUPAC naming, Werner's Theory)
+
+COMMON QUESTIONS AND ANSWERS (12TH STANDARD)
+
+Q: What is the Chain Rule in differentiation?
+A: The Chain Rule is used to differentiate composite functions. It states that d/dx[f(g(x))] = f'(g(x)) * g'(x). Essentially, you differentiate the outer function first and then multiply it by the derivative of the inner function.
+
+Q: Explain Coulomb's Law in Electrostatics.
+A: Coulomb's Law states that the force between two point charges is directly proportional to the product of their magnitudes and inversely proportional to the square of the distance between them. Formula: F = k * (q1 * q2) / r^2.
+
+Q: What is the difference between SN1 and SN2 reactions?
+A: SN1 is a two-step mechanism where a carbocation intermediate is formed; relative rate depends on carbocation stability (3° > 2° > 1°). SN2 is a one-step mechanism where the nucleophile attacks from the back; relative rate depends on steric hindrance (1° > 2° > 3°).
+
+Q: State Kirchhoff's Voltage Law (KVL).
+A: KVL states that the algebraic sum of all voltages (potential differences) around any closed loop in a circuit must equal zero. This is based on the conservation of energy.

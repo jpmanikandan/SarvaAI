@@ -1,0 +1,56 @@
+# Java Log Analysis & Fix Suggestions
+
+## Common Java Exceptions
+
+### NullPointerException (NPE)
+- **Cause**: Attempting to use an object reference that has not been initialized (is null).
+- **Log Pattern**: `java.lang.NullPointerException`
+- **Suggestion**: Check for null before calling methods on an object. Use `Optional` or `@NonNull` annotations. 
+- **Example Fix**: 
+  ```java
+  if (object != null) {
+      object.doSomething();
+  }
+  ```
+
+### StackOverflowError
+- **Cause**: Recursive method call without a proper exit condition, or extremely deep recursion.
+- **Log Pattern**: `java.lang.StackOverflowError`
+- **Suggestion**: Check recursive method calls for base cases. Consider using iteration instead of recursion for deep structures.
+
+### OutOfMemoryError (OOM)
+- **Cause**: JVM has run out of heap space.
+- **Log Pattern**: `java.lang.OutOfMemoryError: Java heap space`
+- **Suggestion**: Increase heap size using `-Xmx` flag. Profile the application for memory leaks using tools like VisualVM or JProfiler.
+
+### ClassNotFoundException / NoClassDefFoundError
+- **Cause**: A required class is missing from the classpath.
+- **Log Pattern**: `java.lang.ClassNotFoundException` or `java.lang.NoClassDefFoundError`
+- **Suggestion**: Verify that the required dependency is included in `pom.xml` (Maven) or `build.gradle` (Gradle). Run `mvn dependency:tree` to check for conflicts.
+
+### ClassCastException
+- **Cause**: Attempting to cast an object to a subclass of which it is not an instance.
+- **Log Pattern**: `java.lang.ClassCastException`
+- **Suggestion**: Use `instanceof` check before casting.
+
+### NumberFormatException
+- **Cause**: Attempting to convert a string to a numeric type, but the string does not have the appropriate format.
+- **Log Pattern**: `java.lang.NumberFormatException`
+- **Suggestion**: Use `try-catch` when parsing strings to numbers. Validate input before parsing.
+
+## Spring Boot Specific Errors
+
+### BeanCreationException
+- **Cause**: Spring cannot create a bean due to a missing dependency, circular reference, or misconfiguration.
+- **Log Pattern**: `org.springframework.beans.factory.BeanCreationException`
+- **Suggestion**: Check the "Caused by" section of the stack trace. Ensure all required beans are annotated with `@Component`, `@Service`, or `@Bean`.
+
+### UnsatisfiedDependencyException
+- **Cause**: Spring cannot find a matching bean for an `@Autowired` field or constructor parameter.
+- **Log Pattern**: `org.springframework.beans.factory.UnsatisfiedDependencyException`
+- **Suggestion**: Verify that a bean of the required type is defined and scanned by Spring.
+
+## Log Analysis Techniques
+1. **Find the Root Cause**: Always look for the last "Caused by" in the stack trace.
+2. **Check Timestamps**: Correlation across different service logs.
+3. **Log Levels**: Use DEBUG or TRACE levels to gather more context during troubleshooting.

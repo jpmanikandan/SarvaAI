@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarva AI | Universal Intelligence</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Highlight.js Theme -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark-reasonable.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Marked.js and Highlight.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+
+<body>
+    <div class="d-flex vh-100 overflow-hidden">
+        <!-- Sidebar Backdrop (Mobile) -->
+        <div id="sidebarBackdrop" class="position-fixed vh-100 vw-100 top-0 start-0 d-none"
+            style="background: rgba(0,0,0,0.4); z-index: 1040; backdrop-filter: blur(2px);"></div>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="bg-dark text-white d-flex flex-column transition-all shadow-lg collapsed">
+            <div class="p-3 border-bottom border-secondary d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <h5 class="m-0 fw-bold"><i class="fas fa-history me-2 text-info"></i>History</h5>
+                </div>
+                <div class="d-flex gap-2">
+                    <button id="newChatBtn" class="btn btn-outline-info btn-sm rounded-circle" title="New Chat">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <!-- Mobile Close Button -->
+                    <button id="closeSidebarBtn" class="btn btn-link text-white d-lg-none p-0 ms-2"
+                        title="Close Sidebar">
+                        <i class="fas fa-times fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="chatList" class="flex-grow-1 overflow-auto p-2">
+                <!-- Chat history items will be injected here -->
+            </div>
+            <div class="p-3 border-top border-secondary text-center">
+                <small class="text-muted">v2.0.0-Stable</small>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-grow-1 d-flex flex-column h-100" style="min-width: 0; position: relative;">
+            <!-- Header -->
+            <header class="bg-dark text-white p-3 shadow-sm d-flex justify-content-between align-items-center"
+                style="z-index: 1030;">
+                <div class="d-flex align-items-center overflow-hidden">
+                    <button id="sidebarToggle" class="btn btn-link text-white me-3 p-0" title="Toggle History">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                    <h4 class="m-0 text-truncate"><i class="fas fa-atom me-2 text-info"></i>Sarva AI Core</h4>
+                </div>
+                <div class="d-flex align-items-center ms-auto">
+                    <span class="badge bg-success me-2 d-none d-sm-inline-block"><i
+                            class="fas fa-circle me-1 small"></i> Online</span>
+                    <select id="outputLanguage"
+                        class="form-select form-select-sm bg-secondary text-white border-0 shadow-none"
+                        style="width: auto;">
+                        <option value="English">English</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="German">German</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="French">French</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Chat Area -->
+            <main id="chatHistory" class="flex-grow-1 p-4 overflow-auto d-flex flex-column-reverse bg-light">
+                <!-- Messages will appear here -->
+                <div class="welcome-msg text-center my-auto">
+                    <i class="fas fa-robot fa-3x text-info mb-3"></i>
+                    <h2>Welcome to Sarva AI</h2>
+                    <p class="text-muted">I am your Universal Expert. Ask me anything about Law, Health, Finance, or
+                        learn
+                        English with Miss Nova.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-4 flex-wrap">
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Can you help me with legal advice?">#Lawbotix</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="How is the stock market performing?">#ArthAI</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Teach me something new in Physics.">#MissNova</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="How does IoT automation work?">#IoT</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Tips for a healthy lifestyle?">#Health</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Find me the best price for a laptop.">#Commerce</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Help me debug this code.">#Dev</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Looking for a life partner.">#Matrimony</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="How do I do the mountain pose?">#Yoga</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Give me a chest workout plan.">#Gym</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Suggest a high protein diet.">#Diet</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Java interview questions on collections.">#Java</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Explain Thales Theorem.">#SSLC</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button" data-query="Explain integration by parts.">#12thStd</span>
+                        <span class="badge rounded-pill bg-outline-info text-info border border-info p-2 agent-badge"
+                            role="button"
+                            data-query="Analyze this Java exception: NullPointerException at line 45.">#LogAnalyzer</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Input Area -->
+            <footer class="p-3 bg-white border-top">
+                <div class="container">
+                    <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border">
+                        <button id="recordBtn" class="btn btn-white text-danger border-end border-0"
+                            title="Voice Input">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <input type="text" id="userInput" class="form-control border-0 px-4"
+                            placeholder="Type your question here...">
+                        <button id="sendBtn" class="btn btn-info text-white border-0 px-4">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div id="voiceStatus" class="text-center mt-2 small text-danger d-none">
+                        <span class="recording-pulse me-2"></span> Recording... Click again to stop.
+                    </div>
+                    <div class="text-center mt-3 d-flex flex-column align-items-center">
+                        <img src="images/belllabs.jpg" alt="Bell Labs"
+                            style="height: 30px; border-radius: 5px; margin-bottom: 5px;">
+                        <small class="text-muted"
+                            style="letter-spacing: 1px; font-size: 0.75rem; font-weight: 300;">POWERED
+                            BY <span class="fw-semibold text-dark">BELLLABS</span></small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js?v=2"></script>
+</body>
+
+</html>

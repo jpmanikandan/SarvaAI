@@ -1,0 +1,57 @@
+
+server:
+  port: ${PORT:8080}
+
+logging:
+  level:
+    org.springframework.ai: INFO
+    org.springframework.web: INFO
+
+spring:
+  application:
+    name: sarva-bhasha-ai-with-core
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: https://api.openai.com
+      chat:
+        model: gpt-4o-mini
+        options:
+          model: gpt-4o-mini
+      audio:
+        transcription:
+          options:
+            model: whisper-1
+            response-format: text
+        speech:
+          options:
+            model: tts-1
+            voice: nova
+            response-format: mp3
+    vectorstore:
+      pinecone:
+        api-key: ${PINECONE_API_KEY}
+        index-name: manidemo
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - email
+              - profile
+  datasource:
+    url: jdbc:h2:file:${DATABASE_PATH:./data/sarva_db};AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: false
